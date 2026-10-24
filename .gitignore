@@ -25,3 +25,6 @@ apps/worker/dist/
 .ig-harness-config.json
 
 node_modules
+
+# VPS 実行時データ（DB・画像）
+apps/worker/data/

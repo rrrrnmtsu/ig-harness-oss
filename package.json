@@ -24,7 +24,8 @@
     "db:migrate": "wrangler d1 execute instagram-harness --remote --file=packages/db/schema.sql && node scripts/apply-migrations.mjs --remote",
     "db:migrate:local": "wrangler d1 execute instagram-harness --local --file=packages/db/schema.sql && node scripts/apply-migrations.mjs --local",
     "deploy:setup": "node packages/create-ig-harness/dist/index.js",
-    "deploy:update": "node packages/create-ig-harness/dist/index.js update"
+    "deploy:update": "node packages/create-ig-harness/dist/index.js update",
+    "start": "pnpm --filter worker start"
   },
   "packageManager": "pnpm@9.15.4",
   "engines": {
@@ -33,5 +34,11 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "wrangler": "4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild"
+    ]
   }
 }

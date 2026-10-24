@@ -10,13 +10,18 @@
     "deploy": "vite build && wrangler deploy",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "start": "tsx src/server.ts"
   },
   "dependencies": {
     "@ig-harness/db": "workspace:*",
     "@ig-harness/ig-sdk": "workspace:*",
     "@ig-harness/shared": "workspace:*",
-    "hono": "^4.6.0"
+    "hono": "^4.6.0",
+    "@hono/node-server": "^1.13.0",
+    "better-sqlite3": "^12.0.0",
+    "dotenv": "^16.4.0",
+    "node-cron": "^3.0.3"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.0.0",
@@ -24,6 +29,10 @@
     "typescript": "^5.7.0",
     "vite": "^6.0.0",
     "vitest": "^2.0.0",
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.0.0",
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.0.0",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.19.0"
   }
 }
